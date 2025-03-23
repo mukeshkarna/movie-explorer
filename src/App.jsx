@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/common/Header";
 import Layout from "./components/layouts/Layout";
+import Watchlist from "./components/Pages/Watchlist";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { useMovie } from "./context/MovieContext";
@@ -8,7 +9,7 @@ import { useMovie } from "./context/MovieContext";
 function App() {
   const { movies } = useMovie();
   console.log(movies, "moviesssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaas");
-//k boo kei nai aaba khana kahyera nislinxu banda gardim? bujyau ho ki jasto tara confident xna kum ma vana na aaba malai particular aauta matra nai sabai list chiyo vanni
+  //k boo kei nai aaba khana kahyera nislinxu banda gardim? bujyau ho ki jasto tara confident xna kum ma vana na aaba malai particular aauta matra nai sabai list chiyo vanni
   return (
     <Layout>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -23,6 +24,7 @@ function App() {
             <p>{movies?.Title}</p>
             <img src={movies?.Poster} alt="" />
           </div>
+          <Watchlist />
         </div>
       </main>
     </Layout>
