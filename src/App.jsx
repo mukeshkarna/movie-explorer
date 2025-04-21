@@ -1,7 +1,9 @@
 import "./App.css";
 import Header from "./components/common/Header";
+import Implementations from "./components/Implementations";
 import Layout from "./components/layouts/Layout";
 import Watchlist from "./components/Pages/Watchlist";
+
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { useMovie } from "./context/MovieContext";
@@ -25,6 +27,8 @@ function App() {
             <img src={movies?.Poster} alt="" />
           </div>
           <Watchlist />
+          <Implementations/>
+          
         </div>
       </main>
     </Layout>
